@@ -4,150 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Samen Vooruit</title>
-
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="https://assets.squarespace.com/universal/default-favicon.ico"/>
 
     <!-- Fonts -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Epilogue:ital,wght@0,400;0,700;1,400;1,700">
-
+    
+    <!-- Your previous styles/scripts -->
     <style>
-      /* Global Styles */
       body {
         font-family: 'Epilogue', sans-serif;
         margin: 0;
         padding: 0;
         background-color: #f7f7f7;
-        color: #333;
       }
-
-      a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-      }
-
-      /* Header Section Styles */
+      
       header {
-        background: url('https://images.squarespace-cdn.com/content/v1/66ed7230a5ed0e3b5c44ceaa/1727182561260-99PLFT0ME2PU7DFWCOLM/unsplash-image-PMQ4Qd9Fu4I.jpg') no-repeat center center;
-        background-size: cover;
-        position: relative;
-        height: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-align: center;
-      }
-
-      header h1 {
-        font-family: 'Anton', sans-serif;
-        font-size: 3.5em; /* Adjust size as needed */
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        margin: 0;
-      }
-
-      header nav {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-      }
-
-      header nav a {
-        font-family: 'Anton', sans-serif;
-        font-size: 1.5em;
-        text-transform: uppercase;
-      }
-
-      /* Politieke Punten Section */
-      .politieke-punten {
         display: flex;
         justify-content: space-between;
-        padding: 4em 2em;
-      }
-
-      .politieke-punten img {
-        max-width: 45%;
-        border-radius: 10px;
-      }
-
-      .politieke-punten ul {
-        list-style-type: none;
-        padding-left: 0;
-        font-size: 1.5em;
-      }
-
-      .politieke-punten ul li {
-        margin-bottom: 1.2em;
-        font-family: 'Epilogue', sans-serif;
-      }
-
-      .politieke-punten ul li::before {
-        content: "-";
-        margin-right: 0.5em;
-        color: #FF3300;
-      }
-
-      .meer-info-button {
-        background-color: #FF3300;
-        color: white;
-        padding: 0.8em 2em;
-        border-radius: 50px;
-        text-align: center;
-        font-size: 1.5em;
-        text-transform: uppercase;
-        text-decoration: none;
-        display: inline-block;
-        font-family: 'Anton', sans-serif;
-      }
-
-      /* Footer */
-      footer {
+        align-items: center;
+        padding: 20px;
         background-color: #333;
         color: white;
-        text-align: center;
-        padding: 2em;
-        font-size: 0.9em;
       }
 
-      footer a {
-        color: #FF3300;
+      .header-title {
+        font-family: 'Anton', sans-serif;
+        font-size: 2.5em;
+        text-transform: uppercase;
+      }
+
+      .header-nav {
+        display: flex;
+        gap: 20px;
+      }
+
+      .header-nav a {
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: 'Anton', sans-serif;
+        font-size: 1.2em;
+      }
+
+      .burger {
+        display: none;
+        cursor: pointer;
+        font-size: 1.5em;
+      }
+
+      .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 4px 0;
+      }
+
+      @media (max-width: 768px) {
+        .header-nav {
+          display: none;
+        }
+
+        .burger {
+          display: block;
+        }
+
+        .header-nav-mobile {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          right: 20px;
+          background-color: #333;
+          padding: 10px;
+          border-radius: 5px;
+        }
+
+        .header-nav-mobile.active {
+          display: flex;
+        }
       }
     </style>
   </head>
-  
+
   <body>
-    <!-- Header Section -->
+    <!-- New Header Start -->
     <header>
-      <h1>SAMEN VOORUIT</h1>
-      <nav>
-        <a href="/samenvooruit/index.html">Home</a>
+      <!-- Title -->
+      <div class="header-title">
+        <a href="../vooruit/index.html" style="color: white;">Samen Vooruit</a>
+      </div>
+
+      <!-- Burger Menu for Mobile -->
+      <div class="burger" onclick="toggleNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="header-nav">
+        <a href="../vooruit/index.html">Home</a>
+        <a href="../vooruit/about.html">Over</a>
+      </nav>
+
+      <!-- Mobile Navigation (Hidden initially) -->
+      <nav class="header-nav-mobile" id="mobileNav">
+        <a href="../vooruit/index.html">Home</a>
+        <a href="../vooruit/about.html">Over</a>
       </nav>
     </header>
+    <!-- New Header End -->
 
-    <!-- Main Content: Politieke Punten -->
-    <section class="politieke-punten">
-      <img src="https://images.squarespace-cdn.com/content/v1/66ed7230a5ed0e3b5c44ceaa/1727183225934-UV4DE9E6QYFFMKAB81TA/unsplash-image-v0OWc_skg0g.jpg" alt="I voted image" />
-      <div>
-        <h2>Politieke Punten</h2>
-        <ul>
-          <li>gratis sporten voor studenten</li>
-          <li>renoveren jeugdhuis</li>
-          <li>meer jongeren evenementen</li>
-          <li>jongeren workshops</li>
-          <li>urban garden</li>
-          <li>project rond geestelijke gezondheid</li>
-          <li>mobiliteitsprojecten</li>
-          <li>wifi op openbare plaatsen</li>
-        </ul>
-        <a href="/samenvooruit/second.html" class="meer-info-button">Meer Info</a>
-      </div>
-    </section>
+    <script>
+      function toggleNav() {
+        const mobileNav = document.getElementById('mobileNav');
+        mobileNav.classList.toggle('active');
+      }
+    </script>
 
-    <!-- Footer -->
+    <!-- Main Section -->
+    <main id="page" class="container" role="main">
+      <article class="sections" id="sections" data-page-sections="66ed73477b515755e001f389">
+        <section data-test="page-section" class='page-section dark'>
+          <div class='content-wrapper'>
+            <div class="content">
+              <h1 style="text-align:center;white-space:pre-wrap;">SAMEN VOORUIT</h1>
+            </div>
+          </div>
+        </section>
+        <section data-test="page-section" class='page-section light'>
+          <div class='content-wrapper'>
+            <div class="content">
+              <h1>politieke punten</h1>
+              <p>-gratis sporten voor studenten</p>
+              <p>-renoveren jeugdhuis</p>
+              <p>-meer jongeren evenementen</p>
+              <p>-jongeren workshops</p>
+              <p>-Urban Garden</p>
+              <p>-project rond geestelijke gezondheid</p>
+              <p>-mobiliteitsprojecten</p>
+              <p>-wifi op openbare plaatsen</p>
+              <div class="sqs-block-button-container sqs-block-button-container--center">
+                <a href="../vooruit/second.html" class="sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element">Meer info</a>
+              </div>
+              <img src="https://images.squarespace-cdn.com/content/v1/66ed7230a5ed0e3b5c44ceaa/1727183225934-UV4DE9E6QYFFMKAB81TA/unsplash-image-v0OWc_skg0g.jpg" alt="Image" style="width:100%; object-fit:cover;">
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- Footer Section -->
     <footer>
-      <p>&copy; 2024 Samen Vooruit | All Rights Reserved</p>
+      <!-- Footer content goes here -->
     </footer>
+
+    <script defer="defer" src="https://static1.squarespace.com/static/vta/5c5a519771c10ba3470d8101/scripts/site-bundle.65e26242174e7f2d8845e29aa884ad31.js" type="text/javascript"></script>
   </body>
 </html>
