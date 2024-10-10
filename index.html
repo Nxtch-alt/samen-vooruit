@@ -1,208 +1,153 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Samen Vooruit - Politieke partij website">
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
     <title>Samen Vooruit</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="https://assets.squarespace.com/universal/default-favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://assets.squarespace.com/universal/default-favicon.ico"/>
     
-    <!-- Font imports -->
-    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Epilogue:ital,wght@0,400;0,700;1,400;1,700">
 
-    <!-- Styles -->
     <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      /* Global Styles */
+      body {
+        font-family: 'Epilogue', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+        color: #333;
+      }
 
-        /* Body settings */
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+      a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+      }
 
-        /* Header */
-        header {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            padding: 30px 50px;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: transparent;
-        }
+      /* Header Section Styles */
+      header {
+        background: url('header-bg.jpg') no-repeat center center;
+        background-size: cover;
+        padding: 3em 0;
+        text-align: center;
+        position: relative;
+      }
 
-        .header-title {
-            font-family: 'Anton', sans-serif;
-            font-size: 2rem;
-            color: white;
-            letter-spacing: 3px;
-        }
+      header h1 {
+        font-family: 'Anton', sans-serif;
+        font-size: 8em; /* Adjust header font size */
+        color: white;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin: 0;
+      }
 
-        .header-nav ul {
-            list-style: none;
-        }
+      header nav {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+      }
 
-        .header-nav ul li {
-            display: inline;
-            margin-left: 30px;
-        }
+      header nav a {
+        font-family: 'Anton', sans-serif;
+        font-size: 1.5em;
+        color: white;
+        margin-left: 20px;
+        text-transform: uppercase;
+      }
 
-        .header-nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-family: 'Roboto', sans-serif;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
+      /* Politieke Punten Section */
+      .politieke-punten {
+        display: flex;
+        justify-content: space-between;
+        padding: 4em 2em;
+      }
 
-        /* Fullscreen background hero section */
-        .hero {
-            background-image: url('https://images.squarespace-cdn.com/content/v1/66ed7230a5ed0e3b5c44ceaa/1727182561260-99PLFT0ME2PU7DFWCOLM/unsplash-image-PMQ4Qd9Fu4I.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
+      .politieke-punten img {
+        max-width: 45%;
+        border-radius: 10px;
+      }
 
-        .hero h1 {
-            font-family: 'Anton', sans-serif;
-            color: white;
-            font-size: 7rem;
-            text-transform: uppercase;
-            letter-spacing: 8px;
-        }
+      .politieke-punten ul {
+        list-style-type: none;
+        padding-left: 0;
+        font-size: 1.5em;
+      }
 
-        /* Content section */
-        .content-wrapper {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 50px 0;
-            background-color: white;
-        }
+      .politieke-punten ul li {
+        margin-bottom: 1.2em;
+        font-family: 'Epilogue', sans-serif;
+      }
 
-        .content-left img {
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-        }
+      .politieke-punten ul li::before {
+        content: "-";
+        margin-right: 0.5em;
+        color: #FF3300;
+      }
 
-        .content-right {
-            max-width: 500px;
-        }
+      .meer-info-button {
+        background-color: #FF3300;
+        color: white;
+        padding: 0.8em 2em;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: inline-block;
+        font-family: 'Anton', sans-serif;
+      }
 
-        .content-right h2 {
-            font-family: 'Anton', sans-serif;
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
+      /* Footer */
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 2em;
+        font-size: 0.9em;
+      }
 
-        .content-right ul {
-            list-style-type: none;
-            padding-left: 0;
-            line-height: 2rem;
-            font-size: 1.5rem;
-        }
-
-        .content-right ul li {
-            margin-bottom: 15px;
-            font-weight: 500;
-        }
-
-        .content-right ul li::before {
-            content: "- ";
-            font-weight: bold;
-            font-size: 1.5rem;
-            color: #333;
-        }
-
-        /* Call-to-action button */
-        .cta-button {
-            display: inline-block;
-            margin-top: 30px;
-            background-color: #f76349;
-            color: white;
-            text-decoration: none;
-            padding: 20px 40px;
-            font-family: 'Roboto', sans-serif;
-            font-size: 1.4rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            border-radius: 40px;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #d95233;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            font-size: 1rem;
-        }
-
+      footer a {
+        color: #FF3300;
+      }
     </style>
-</head>
-<body>
+  </head>
+  
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>Samen Vooruit</h1>
+      <nav>
+        <a href="#">Over</a>
+      </nav>
+    </header>
 
-<!-- Header with Navigation -->
-<header>
-    <div class="header-title">SAMEN VOORUIT</div>
-    <nav class="header-nav">
+    <!-- Main Content: Politieke Punten -->
+    <section class="politieke-punten">
+      <img src="voting.jpg" alt="I voted image" />
+      <div>
+        <h2>Politieke Punten</h2>
         <ul>
-            <li><a href="/samenvooruit/about.html">Over</a></li>
+          <li>gratis sporten voor studenten</li>
+          <li>renoveren jeugdhuis</li>
+          <li>meer jongeren evenementen</li>
+          <li>jongeren workshops</li>
+          <li>urban garden</li>
+          <li>project rond geestelijke gezondheid</li>
+          <li>mobiliteitsprojecten</li>
+          <li>wifi op openbare plaatsen</li>
         </ul>
-    </nav>
-</header>
+        <a href="#" class="meer-info-button">Meer Info</a>
+      </div>
+    </section>
 
-<!-- Fullscreen Hero Section -->
-<section class="hero">
-    <h1>SAMEN VOORUIT</h1>
-</section>
-
-<!-- Main Content Section -->
-<section class="content-wrapper">
-    <div class="content-left">
-        <img src="https://images.squarespace-cdn.com/content/v1/66ed7230a5ed0e3b5c44ceaa/1727183225934-UV4DE9E6QYFFMKAB81TA/unsplash-image-v0OWc_skg0g.jpg" alt="I Voted">
-    </div>
-    <div class="content-right">
-        <h2>Politieke punten</h2>
-        <ul>
-            <li>Gratis sporten voor studenten</li>
-            <li>Renoveren jeugdhuis</li>
-            <li>Meer jongeren evenementen</li>
-            <li>Jongeren workshops</li>
-            <li>Urban Garden</li>
-            <li>Project rond geestelijke gezondheid</li>
-            <li>Mobiliteitsprojecten</li>
-            <li>Wifi op openbare plaatsen</li>
-        </ul>
-        <a href="#meerinfo" class="cta-button">Meer info</a>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer>
-    <p>&copy; 2024 Samen Vooruit</p>
-</footer>
-
-</body>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Samen Vooruit | All Rights Reserved</p>
+    </footer>
+  </body>
 </html>
