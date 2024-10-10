@@ -39,6 +39,7 @@
         align-items: center;
         position: relative;
         color: white;
+        text-align: center;
       }
 
       /* Dark overlay to make text more readable */
@@ -55,12 +56,12 @@
 
       header h1 {
         font-family: 'Anton', sans-serif;
-        font-size: 8em; /* Adjust header font size */
+        font-size: 6em;
         letter-spacing: 0.05em;
         text-transform: uppercase;
         margin: 0;
-        z-index: 2; /* Ensure text appears above the overlay */
-        color: white !important; /* Make the text white with !important */
+        z-index: 2;
+        color: white !important;
       }
 
       header nav {
@@ -72,7 +73,7 @@
 
       header nav a {
         font-family: 'Anton', sans-serif;
-        font-size: 1.5em;
+        font-size: 1.2em;
         color: white;
         margin-left: 20px;
         text-transform: uppercase;
@@ -82,12 +83,14 @@
       .politieke-punten {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         padding: 4em 2em;
       }
 
       .politieke-punten img {
-        max-width: 45%;
+        max-width: 100%;
         border-radius: 10px;
+        margin-bottom: 20px;
       }
 
       .politieke-punten ul {
@@ -131,6 +134,56 @@
 
       footer a {
         color: #FF3300;
+      }
+
+      /* Mobile Styles */
+      @media (max-width: 768px) {
+        header {
+          height: 80vh;
+        }
+
+        header h1 {
+          font-size: 4em;
+        }
+
+        header nav {
+          top: 10px;
+          right: 20px;
+        }
+
+        header nav a {
+          font-size: 1em;
+        }
+
+        .politieke-punten {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .politieke-punten img {
+          max-width: 90%;
+        }
+
+        .politieke-punten ul {
+          font-size: 1.2em;
+        }
+
+        .meer-info-button {
+          font-size: 1.2em;
+          padding: 0.6em 1.5em;
+        }
+      }
+
+      /* Desktop Styles */
+      @media (min-width: 769px) {
+        .politieke-punten {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .politieke-punten img {
+          max-width: 45%;
+        }
       }
     </style>
   </head>
