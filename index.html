@@ -1,133 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="description" content="Samen Vooruit - A political initiative focusing on youth activities and well-being.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Samen Vooruit - Politieke partij website">
     <title>Samen Vooruit</title>
     
-    <!-- Favicon -->
-    <link rel="icon" href="https://assets.squarespace.com/universal/default-favicon.ico">
-    
-    <!-- Fonts and Styles -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Epilogue:ital,wght@0,400;0,700;1,400;1,700">
-    
-    <!-- CSS for layout and buttons -->
+    <!-- Font imports -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
     <style>
-        /* General styles */
-        body {
-            font-family: 'Epilogue', sans-serif;
+        /* General Reset */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f7f7f7;
-            color: #333;
+            box-sizing: border-box;
         }
-        
-        a {
-            color: black;
-            text-decoration: none;
-            font-weight: bold;
+
+        /* Body settings */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
         }
 
         /* Header */
         header {
             position: relative;
+            width: 100%;
+            height: 100px;
         }
 
-        /* Full-width Hero Section */
+        /* Fullscreen background hero section */
         .hero {
             background-image: url('https://images.squarespace-cdn.com/content/v1/66ed7230a5ed0e3b5c44ceaa/1727182561260-99PLFT0ME2PU7DFWCOLM/unsplash-image-PMQ4Qd9Fu4I.jpg');
             background-size: cover;
             background-position: center;
-            height: 500px;
+            height: 450px;
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
 
         .hero h1 {
             font-family: 'Anton', sans-serif;
             color: white;
-            font-size: 4em;
-            text-align: center;
+            font-size: 4rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 5px;
         }
 
-        .header-title-text {
+        /* Header title and navigation */
+        .header-title {
             position: absolute;
             top: 20px;
-            left: 20px;
-            color: white;
+            left: 30px;
             font-family: 'Anton', sans-serif;
-            font-size: 1.5em;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .header-nav {
+            position: absolute;
+            top: 20px;
+            right: 30px;
         }
 
         .header-nav ul {
-            position: absolute;
-            top: 20px;
-            right: 20px;
             list-style: none;
         }
 
         .header-nav ul li {
             display: inline;
-            margin-left: 20px;
+            margin-left: 30px;
         }
 
-        /* Content Section */
+        .header-nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+        }
+
+        /* Content section */
         .content-wrapper {
             display: flex;
-            justify-content: center;
-            padding: 50px;
-            background-color: white;
-        }
-
-        .content-left {
-            flex: 1;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: -50px;
+            padding: 50px 0;
         }
 
         .content-left img {
-            width: 100%;
+            width: 350px;
             height: auto;
+            object-fit: cover;
         }
 
         .content-right {
-            flex: 1;
-            padding-left: 50px;
+            max-width: 500px;
         }
 
         .content-right h2 {
             font-family: 'Anton', sans-serif;
-            font-size: 2.5em;
+            font-size: 3rem;
             margin-bottom: 20px;
         }
 
         .content-right ul {
             list-style-type: none;
-            padding: 0;
+            padding-left: 0;
+            line-height: 1.8;
         }
 
         .content-right ul li {
-            font-size: 1.2em;
-            margin-bottom: 10px;
+            font-size: 1.3rem;
         }
 
         /* Call-to-action button */
         .cta-button {
-            background-color: #D32F2F;
-            color: white;
-            padding: 15px 30px;
-            text-transform: uppercase;
-            text-decoration: none;
             display: inline-block;
-            border-radius: 5px;
             margin-top: 30px;
+            background-color: #f76349;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
         }
 
         .cta-button:hover {
-            background-color: #A02121;
+            background-color: #d95233;
         }
 
         /* Footer */
@@ -136,6 +145,7 @@
             padding: 20px;
             background-color: #333;
             color: white;
+            font-size: 1rem;
         }
 
     </style>
@@ -144,43 +154,39 @@
 
 <!-- Header with Navigation -->
 <header>
-    <div class="header-title-text">
-        <a href="/samenvooruit/index.html">Samen Vooruit</a>
-    </div>
+    <div class="header-title">SAMEN VOORUIT</div>
     <nav class="header-nav">
         <ul>
-            <li><a href="/samenvooruit/about.html">Over</a></li>
+            <li><a href="#about">Over</a></li>
         </ul>
     </nav>
 </header>
 
-<!-- Full-width Hero Section -->
+<!-- Fullscreen Hero Section -->
 <section class="hero">
     <h1>SAMEN VOORUIT</h1>
 </section>
 
 <!-- Main Content Section -->
-<main>
-    <div class="content-wrapper">
-        <div class="content-left">
-            <img src="https://images.squarespace-cdn.com/content/v1/66ed7230a5ed0e3b5c44ceaa/1727183225934-UV4DE9E6QYFFMKAB81TA/unsplash-image-v0OWc_skg0g.jpg" alt="I Voted">
-        </div>
-        <div class="content-right">
-            <h2>Politieke punten</h2>
-            <ul>
-                <li>Gratis sporten voor studenten</li>
-                <li>Renoveren jeugdhuis</li>
-                <li>Meer jongeren evenementen</li>
-                <li>Jongeren workshops</li>
-                <li>Urban Garden</li>
-                <li>Project rond geestelijke gezondheid</li>
-                <li>Mobiliteitsprojecten</li>
-                <li>Wifi op openbare plaatsen</li>
-            </ul>
-            <a href="/samenvooruit/second.html" class="cta-button">Meer info</a>
-        </div>
+<section class="content-wrapper">
+    <div class="content-left">
+        <img src="https://images.squarespace-cdn.com/content/v1/66ed7230a5ed0e3b5c44ceaa/1727183225934-UV4DE9E6QYFFMKAB81TA/unsplash-image-v0OWc_skg0g.jpg" alt="I Voted">
     </div>
-</main>
+    <div class="content-right">
+        <h2>Politieke punten</h2>
+        <ul>
+            <li>Gratis sporten voor studenten</li>
+            <li>Renoveren jeugdhuis</li>
+            <li>Meer jongeren evenementen</li>
+            <li>Jongeren workshops</li>
+            <li>Urban Garden</li>
+            <li>Project rond geestelijke gezondheid</li>
+            <li>Mobiliteitsprojecten</li>
+            <li>Wifi op openbare plaatsen</li>
+        </ul>
+        <a href="#meerinfo" class="cta-button">Meer info</a>
+    </div>
+</section>
 
 <!-- Footer -->
 <footer>
