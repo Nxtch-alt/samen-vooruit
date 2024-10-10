@@ -111,13 +111,20 @@
         .content-right ul {
             list-style-type: none;
             padding-left: 0;
-            line-height: 2.5rem;
-            font-size: 1.8rem;
+            line-height: 2rem;
+            font-size: 1.5rem;
         }
 
         .content-right ul li {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             font-weight: 500;
+        }
+
+        .content-right ul li::before {
+            content: "- ";
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #333;
         }
 
         /* Call-to-action button */
