@@ -1,0 +1,44 @@
+# Site settings
+title: Samen Vooruit
+description: "Welcome to Samen Vooruit. Explore our initiatives and projects."
+baseurl: "" # Leave this empty for user or org sites, use '/' for project sites
+url: "https://icwicw.github.io" # The URL of your GitHub Pages site
+author: 
+  name: "Alexander Otto"
+  email: "alexanderem.otto@gmail.com"
+
+# Build settings
+markdown: kramdown
+theme: minima # You can change this if you are using a different theme
+
+# Exclude certain files or directories from the build process
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+
+# Include additional files in the build process
+include:
+  - _pages
+  - _posts
+
+# Pagination settings (Optional)
+paginate: 5
+paginate_path: "/page:num/"
+
+# GitHub Pages settings
+github:
+  is_project_page: true # Change to false if it’s a user/org page
+
+# Plugins (Optional)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Custom theme settings
+theme_settings:
+  header_background: "#333"
+  text_color: "#fff"
+
