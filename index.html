@@ -14,11 +14,82 @@
   <!-- Fonts and Styles -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Epilogue:ital,wght@0,400;0,700;1,400;1,700">
 
-  <!-- Squarespace JS files -->
-  <script defer src="https://assets.squarespace.com/@sqs/polyfiller/1.6/modern.js"></script>
-
-  <!-- CSS for buttons and layout -->
+  <!-- CSS for layout and buttons -->
   <link rel="stylesheet" type="text/css" href="https://static1.squarespace.com/static/vta/5c5a519771c10ba3470d8101/versioned-assets/1728323017363-DJXHB6OU0T8MXWKJTQH4/static.css">
+
+  <style>
+    /* Custom styles */
+    body {
+      font-family: 'Epilogue', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-family: 'Anton', sans-serif;
+      color: white;
+      text-align: center;
+      font-size: 4em;
+      text-decoration: underline;
+    }
+
+    ul {
+      font-size: 1.2em;
+    }
+
+    .sqs-block-button-element--primary {
+      background-color: #D32F2F;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    .sqs-block-button-element--primary:hover {
+      background-color: #A02121;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #333;
+      color: white;
+    }
+
+    /* Custom image styles */
+    .image-block img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .full-bleed-section {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .dark {
+      background-color: #000;
+    }
+
+    .light {
+      background-color: #fff;
+    }
+  </style>
 </head>
 
 <body>
@@ -38,14 +109,16 @@
 
   <!-- Main Content -->
   <main id="page" class="container" role="main">
+    <!-- Hero Section with background image -->
     <section class="page-section dark full-bleed-section background-width--full-bleed section-height--small" style="background-image: url('https://images.squarespace-cdn.com/content/v1/66ed7230a5ed0e3b5c44ceaa/1727182561260-99PLFT0ME2PU7DFWCOLM/unsplash-image-PMQ4Qd9Fu4I.jpg'); background-size: cover;">
       <div class="content-wrapper">
         <div class="content">
-          <h1 style="text-align:center; color: white;"><span style="text-decoration: underline;">SAMEN VOORUIT</span></h1>
+          <h1>SAMEN VOORUIT</h1>
         </div>
       </div>
     </section>
 
+    <!-- Content Section with political points -->
     <section class="page-section light full-bleed-section section-height--custom content-width--wide">
       <div class="content-wrapper">
         <div class="content">
@@ -66,9 +139,9 @@
             <a href="second.html" class="sqs-block-button-element--medium sqs-button-element--primary">Meer info</a>
           </div>
 
-          <!-- Image -->
+          <!-- Image Block -->
           <div class="image-block">
-            <img src="https://images.squarespace-cdn.com/content/v1/66ed7230a5ed0e3b5c44ceaa/1727183225934-UV4DE9E6QYFFMKAB81TA/unsplash-image-v0OWc_skg0g.jpg" alt="Community image" style="width: 100%; height: auto; object-fit: cover;">
+            <img src="https://images.squarespace-cdn.com/content/v1/66ed7230a5ed0e3b5c44ceaa/1727183225934-UV4DE9E6QYFFMKAB81TA/unsplash-image-v0OWc_skg0g.jpg" alt="Community image">
           </div>
         </div>
       </div>
@@ -77,7 +150,7 @@
 
   <!-- Footer -->
   <footer>
-    <p style="text-align: center;">&copy; 2024 Samen Vooruit</p>
+    <p>&copy; 2024 Samen Vooruit</p>
   </footer>
 
   <!-- External Scripts -->
